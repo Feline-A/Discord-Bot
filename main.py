@@ -53,7 +53,24 @@ async def animals(ctx):
     img_name = random.choice(os.listdir('images/animal1'))
     with open(f'images/animal1/{img_name}', 'rb') as f:
         picture = discord.File(f)
-
     await ctx.send(file=picture)
+
+@bot.command()
+async def protokol(ctx):
+    await ctx.send('''protokol kesehatan pencegahan polusi udara 6M dan 1S, yaitu
+1. Periksa kualitas udara.
+2. Kurangi Aktivitas di luar ruangan.
+3. Gunakan penjernih udara 
+4. Hindari sumber polusi atau asap rokok
+5. gunakan masker saat polusi udara banyak 
+6. Hidup bersih dan sehat 
+7. Konsultasi dengan dokter jika muncul keluhan pernapasan
+''')
+
+@bot.command()
+async def jenissampah(ctx):
+    f = open('D:\Python PRO\Discord\jenissampah.txt', 'r', encoding='utf-8')
+    text = f.read()
+    await ctx.send(text)
 
 bot.run('Token')
